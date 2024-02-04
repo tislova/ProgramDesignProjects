@@ -8,9 +8,9 @@ The program simulates vending machine. It takes input from the user and outputs 
 #define REESES 25
 #define SNICKERS 50
 
-//Obtains the amount of inserted coins
+// Obtains the amount of inserted coins
 int getCoins();
-//Calculates change or detects insufficient amount based on selection choice
+// Calculates change or detects insufficient amount based on selection choice
 int getChange(int amount, int choice);
 
 int main(void)
@@ -20,7 +20,7 @@ int main(void)
     printf("1 - Hershey's kisses (15 cents), 2 - Reese's Peanut Butter Cups (25 cents), 3 - Snickers (50 cents)\n");
     printf("Enter your choice:");
     scanf("%i", &choice);
-    if (choice > 0 && choice < 4) //Input validation
+    if (choice > 0 && choice < 4) // Input validation
     {
     getChange(amount, choice);
     }
