@@ -4,11 +4,11 @@ The program takes inputs form the user and calculates the total charge of the ev
 #include <stdio.h>
 #include <stdlib.h>
 
-//Obtain a valid package number from the user
+// Obtain a valid package number from the user
 int getSelection();
-//Obtain a valid number of hours
+// Obtain a valid number of hours
 int getHours();
-//Obtain a valid number of guests based on the package number
+// Obtain a valid number of guests based on the package number
 int getGuests(int selection_choice);
 
 int main(void)
@@ -17,17 +17,17 @@ int main(void)
     int selection_hours = getHours();
     int selection_guests = getGuests(selection_choice);
     int total_charge;
-    int max1 = 595; //Maximum value of charge of the first package
+    int max1 = 595; // Maximum value of charge of the first package
     int max2 = 850;
     int max3 = 1050;
 
-    switch (selection_choice) //Calculate total_charge based on the package number
+    switch (selection_choice) // Calculate total_charge based on the package number
     {
         case 1: 
         total_charge = 150 + 100 * (selection_hours - 1) + 25 * selection_guests;
         if (total_charge > max1)
         {
-            printf("Charge($):%i\n", max1); //Print out the maximum charge if total_charge exceeds
+            printf("Charge($):%i\n", max1); // Print out the maximum charge if total_charge exceeds
             return 0;
         }
         break;
