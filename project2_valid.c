@@ -9,7 +9,7 @@ int main(void)
     int c;
     printf("Enter input: ");
 
-    while ((c = getchar()) != '\n') //User input ends with pressing enter
+    while ((c = getchar()) != '\n') // User input ends with pressing enter
     {
         if (isupper(c) || (ispunct(c) && c != '!' && c != '?' && c != '.')) //Condition for invalid input
         {
